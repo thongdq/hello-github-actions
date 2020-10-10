@@ -16,10 +16,10 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Slack Notification
-            uses: rtCamp/action-slack-notify@master
-            env:
-                SLACK_CHANNEL: CiCd
-                SLACK_MESSAGE: 'Please review on https://github.com/thongdq/hello-github-actions/pull/${{ env.pull_number}}'
-                SLACK_TITLE: 'Pull request'
-                SLACK_USERNAME: 'thongdq'
-                SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          uses: rtCamp/action-slack-notify@master
+          env:
+            SLACK_CHANNEL: CiCd
+            SLACK_MESSAGE: 'Please review on https://github.com/thongdq/hello-github-actions/pull/${{ env.pull_number}}'
+            SLACK_TITLE: 'Pull request'
+            SLACK_USERNAME: 'thongdq'
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
